@@ -23,10 +23,10 @@ startBtn.addEventListener("click", async () =>{
     if(typeof DeviceMotionEvent.requestPermission === "function"){
         const res=await DeviceMotionEvent.requestPermission();
         if(res !== "granted"){
-            atatusDiv.textContent = "センサーが許可されませんでした";
+            statusDiv.textContent = "センサーが許可されませんでした";
             return;
         }
     }
-    windows.addEventListener("devicemotion",onMotion);
+    window.addEventListener("devicemotion",onMotion);
     statusDiv.textContent = "計測中";
 });
