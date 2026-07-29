@@ -1,8 +1,8 @@
 const startBtn = document.getElementById("startBtn");
 const statusDiv = document.getElementById("status");
-const valX = ducument.getElementById("valX");
-const valY = ducument.getElementById("valY");
-const valZ = ducument.getElementById("valZ");
+const valX = document.getElementById("valX");
+const valY = document.getElementById("valY");
+const valZ = document.getElementById("valZ");
 
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
