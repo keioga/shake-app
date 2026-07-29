@@ -1,5 +1,3 @@
-alert("app.js 読み込みOK");
-
 const startBtn = document.getElementById("startBtn");
 const statusDiv = document.getElementById("status");
 const valX = document.getElementById("valX");
@@ -11,9 +9,9 @@ function onMotion(e){
     const acc = e.accelerationIncludingGravity;
     if(!acc) return;
 
-    valX.textContent = acc.x;
-    valY.textContent = acc.y;
-    valZ.textContent = acc.z;
+    valX.textContent = acc.x.toFixed(1);
+    valY.textContent = acc.y.toFixed(1);
+    valZ.textContent = acc.z.toFixed(1);
     
 }
 
