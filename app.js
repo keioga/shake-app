@@ -1,3 +1,5 @@
+alert("app.js 読み込みOK");
+
 const startBtn = document.getElementById("startBtn");
 const statusDiv = document.getElementById("status");
 const valX = document.getElementById("valX");
