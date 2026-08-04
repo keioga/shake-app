@@ -16,6 +16,7 @@ function onMotion(e){
     const p = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z*acc.z);
     power.textContent = p.toFixed(1);
     
+    power.style.fontsize = (20+p)+"px";
     if(p > maxValue){
         maxValue = p;
         maxPower.textContent = maxValue.toFixed(1);
