@@ -1,18 +1,29 @@
 const startBtn = document.getElementById("startBtn");
 const statusDiv = document.getElementById("status");
-const valX = document.getElementById("valX");
-const valY = document.getElementById("valY");
-const valZ = document.getElementById("valZ");
+
+const power = document.getElementById("power");
+const maxPower = document.getElementById("maxPower");
+
+let maxValue=0;
 
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
     const acc = e.accelerationIncludingGravity;
     if(!acc) return;
 
-    valX.textContent = acc.x.toFixed(1);
-    valY.textContent = acc.y.toFixed(1);
-    valZ.textContent = acc.z.toFixed(1);
+    const p = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z*acc.z);
+    power.textContent = p.toFixed(1);
     
+    if(p > maxValue){
+        maxValue = p;
+        maxPower.textContent = maxValue.toFixed(1);
+    }
+
+    if(p > 20){
+        document.body.classList.add("shaking");
+    }else{
+        document.body.classList.remove("shaking");
+    }
 }
 
 
