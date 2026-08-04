@@ -6,6 +6,8 @@ const maxPower = document.getElementById("maxPower");
 
 let maxValue=0;
 
+alert("Step2");
+
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
     const acc = e.accelerationIncludingGravity;
