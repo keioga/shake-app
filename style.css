@@ -37,3 +37,9 @@ button{
 .shaking{
     background-color : #fde68a;
 }
+
+#count {
+  font-size: 64px;
+  font-weight: bold;
+  color: #dc2626;
+}

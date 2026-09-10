@@ -1,8 +1,15 @@
 const startBtn = document.getElementById("startBtn");
+const resetBtn = document.getElementById("resetBtn");
 const statusDiv = document.getElementById("status");
+const countDiv = document.getElementById("count");
 
 const power = document.getElementById("power");
 const maxPower = document.getElementById("maxPower");
+const THRESHOLD = 25;     // これ以上ゆれたら「1回振った」とみなす
+const COOL_TIME = 300;    // 次に数えるまで待つ時間（ミリ秒）
+
+let count = 0;
+let lastTime = 0;         // 最後に数えた時刻
 
 let maxValue=0;
 
@@ -11,9 +18,18 @@ alert("Step2");
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
     const acc = e.accelerationIncludingGravity;
+    
     if(!acc) return;
 
     const p = Math.sqrt(acc.x * acc.x + acc.y * acc.y + acc.z*acc.z);
+    const now = Date.now();
+    
+    if (p > THRESHOLD && now - lastTime > COOL_TIME) {
+        count = count + 1;
+        countDiv.textContent = count;
+        lastTime = now;
+    }
+
     power.textContent = p.toFixed(1);
     
     power.style.fontsize = (20+p)+"px";
@@ -29,6 +45,10 @@ function onMotion(e){
     }
 }
 
+resetBtn.addEventListener("click", () => {
+  count = 0;
+  countDiv.textContent = count;
+});
 
 
 // 「センサー開始」ボタンが押されたときの処理
