@@ -34,6 +34,8 @@ function onMotion(e){
 
     if (count % 10 == 0 ){
         mess.textContent = "いいね！！この調子♪";
+    }else{
+        mess.textContent = "がんばって！♪";
     }
 
     power.textContent = p.toFixed(1);
