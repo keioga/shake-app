@@ -15,7 +15,7 @@ let lastTime = 0;         // 最後に数えた時刻
 
 let maxValue=0;
 
-alert("Ver3.22");
+alert("Ver3.23");
 
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
@@ -32,7 +32,7 @@ function onMotion(e){
         lastTime = now;
     }
 
-    if (count % 10 == 0 ){
+    if (count % 10 == 0 && count > 1){
         mess.textContent = "いいね！！この調子♪";
     }else{
         mess.textContent = "がんばって！♪";
