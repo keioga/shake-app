@@ -8,6 +8,8 @@ const maxPower = document.getElementById("maxPower");
 const THRESHOLD = 25;     // これ以上ゆれたら「1回振った」とみなす
 const COOL_TIME = 300;    // 次に数えるまで待つ時間（ミリ秒）
 
+const mess = document.getElementById("mess");
+
 let count = 0;
 let lastTime = 0;         // 最後に数えた時刻
 
@@ -28,6 +30,10 @@ function onMotion(e){
         count = count + 1;
         countDiv.textContent = count;
         lastTime = now;
+    }
+
+    if (count % 10 == 0 ){
+        mess.textContent = "いいね！！この調子♪";
     }
 
     power.textContent = p.toFixed(1);
