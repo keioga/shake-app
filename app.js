@@ -7,9 +7,9 @@ const power = document.getElementById("power");
 const maxPower = document.getElementById("maxPower");
 // const THRESHOLD = 25;     // これ以上ゆれたら「1回振った」とみなす
 
-const THRESHOLD = 10;     // ちょっと簡単にしてみる ver4.02
+const THRESHOLD = 15;     // ちょっと簡単にしてみる ver4.02
 
-const COOL_TIME = 300;    // 次に数えるまで待つ時間（ミリ秒）
+const COOL_TIME = 200;    // 次に数えるまで待つ時間（ミリ秒）
 
 const timerDiv = document.getElementById("timer");
 const messageDiv = document.getElementById("message");
@@ -29,7 +29,7 @@ let lastTime = 0;         // 最後に数えた時刻
 
 let maxValue=0;
 
-alert("Ver4.02");
+alert("Ver4.03");
 
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
