@@ -102,10 +102,10 @@ function endGame() {
 }
 
 
-resetBtn.addEventListener("click", () => {
-  count = 0;
-  countDiv.textContent = count;
-});
+    // resetBtn.addEventListener("click", () => {
+    //   count = 0;
+    //   countDiv.textContent = count;
+    // });
 
 
 // 「センサー開始」ボタンが押されたときの処理
