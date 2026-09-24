@@ -26,7 +26,7 @@ let lastTime = 0;         // 最後に数えた時刻
 
 let maxValue=0;
 
-alert("Ver4.00");
+alert("Ver4.01");
 
 // センサーの値が変化するたびに呼ばれる関数
 function onMotion(e){
