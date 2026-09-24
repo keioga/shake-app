@@ -43,3 +43,13 @@ button{
   font-weight: bold;
   color: #dc2626;
 }
+
+
+#timer { 
+font-size: 28px; 
+color: #059669; 
+}
+#message { 
+font-size: 20px; 
+font-weight: bold; 
+}

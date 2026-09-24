@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>センサーの値を見る</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10秒シェイク対決</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>シェイクアプリvER3.23</h1>
-    <button id="startBtn">センサー開始</button>
-    <p id="status">停止中</p>
-    <div class="panel">
-        <p id="count">0</p>
-        <p>回ふりました</p>
-        <p id="mess"> </p>
-        <p id="power">0.0</p>
-        <p>最大値：<span id="maxPower">0.0</span></p>
-    </div>
-    <button id="resetBtn">リセット</button>
-
-    <div>ver1.22</div>
-
-    <script src="app.js"></script>
+  <h1>10秒シェイク対決</h1>
+  <button id="startBtn">ゲームスタート</button>
+  <p id="status">スタートボタンを押してね</p>
+  <div class="panel">
+    <p id="timer">10.0</p>
+    <p id="count">0</p>
+    <p id="message"></p>
+    <p>ハイスコア：<span id="best">0</span></p>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
