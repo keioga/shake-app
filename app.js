@@ -7,7 +7,7 @@ const power = document.getElementById("power");
 const maxPower = document.getElementById("maxPower");
 // const THRESHOLD = 25;     // これ以上ゆれたら「1回振った」とみなす
 
-const THRESHOLD = 15;     // ちょっと簡単にしてみる ver4.02
+const THRESHOLD = 25;     // ちょっと簡単にしてみる ver4.02
 
 const COOL_TIME = 200;    // 次に数えるまで待つ時間（ミリ秒）
 
