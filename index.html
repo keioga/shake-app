@@ -3,19 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>10秒シェイク対決</title>
+<title>歩数計</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>10秒シェイク対決</h1>
-  <button id="startBtn">ゲームスタート</button>
-  <p id="status">スタートボタンを押してね</p>
+  <h1>歩数計</h1>
+  <button id="startBtn">計測開始</button>
+  <p id="status">停止中</p>
   <div class="panel">
-    <p id="timer">10.0</p>
-    <p id="count">0</p>
-    <p id="message"></p>
-    <p>ハイスコア：<span id="best">0</span></p>
+    <p id="steps">0</p>
+    <p>歩</p>
+    <div class="bar-back"><div class="bar-front" id="bar"></div></div>
+    <p>目標 <span id="goal">1000</span> 歩　達成率 <span id="rate">0</span>％</p>
+    <p>およそ <span id="distance">0</span> m 歩きました</p>
   </div>
+  <button id="resetBtn">リセット</button>
   <script src="app.js"></script>
 </body>
 </html>
+
